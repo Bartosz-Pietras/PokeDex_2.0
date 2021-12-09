@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {% if pokemon %}
+        <div>
+            <h1>This is {{ pokemon }}!</h1>
+        </div>
+        <div>
+            <a href="/upload">Wanna try again?</a>
+        </div>
+    {% endif %}
+{% endblock content %}

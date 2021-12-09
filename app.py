@@ -1,5 +1,4 @@
 import numpy as np
-import cv2 as cv
 from PIL import Image
 
 from flask import Flask, render_template, url_for, flash, redirect, request

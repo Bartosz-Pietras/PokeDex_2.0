@@ -23,6 +23,7 @@ def upload():
         pokemon_pic = Image.open(form.pokemon.data)
         image = pokemon_pic.resize((224, 224))
         image = np.array(image)
+        image = image[:, :, :3]
         image = keras.applications.vgg16.preprocess_input(image)
         input_arr = keras.preprocessing.image.img_to_array(image)
         input_arr = np.array([input_arr])
